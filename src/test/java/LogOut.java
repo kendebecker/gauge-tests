@@ -2,6 +2,9 @@ import com.thoughtworks.gauge.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.html5.SessionStorage;
+import org.openqa.selenium.html5.WebStorage;
+import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.driver.Driver;
@@ -34,7 +37,9 @@ public class LogOut {
 
     private void logOut() {
         WebDriver webDriver = Driver.webDriver;
-
+//        WebStorage webStorage = (WebStorage) new Augmenter().augment(webDriver);
+//        SessionStorage sessionStorage = webStorage.getSessionStorage();
+//        sessionStorage.removeItem("user_id");
         WebDriverWait wait = new WebDriverWait(webDriver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(submitLogOut));
         WebElement logOut = webDriver.findElement(submitLogOut);

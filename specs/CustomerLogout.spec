@@ -12,3 +12,6 @@ Customer must be able to log out
 --------------------------------
 * Sign up as <name> with email <email> and <password>
 * Log out
+//
+//___
+//* Delete user <name>
